@@ -16,7 +16,6 @@ const initialCounters =[
   }
 ]
 
-
 function App() {
   const [counters,setCounters]=useState(initialCounters)
   const total = counters.reduce((totalValue,current)=>totalValue+current.value,0)
@@ -53,7 +52,6 @@ function App() {
       {
         counters.map(counter=><Counter handleDec={()=>handleDec(counter.id)} handleInc={()=>handleInc(counter.id)} counter={counter.value} counterObj={counter} key={counter.id}/>)
       }
-      
       <TotalCounter TotalCounter={total}/>
     </>
   )
